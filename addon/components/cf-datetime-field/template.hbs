@@ -1,0 +1,22 @@
+<style>
+
+    .submission-text-field {
+        margin-top: 10px;
+    }
+
+
+</style>
+
+{{#if (not editing)}}
+
+    {{valueName}}: {{widget.parameters.date.value}}
+
+{{/if}}
+
+{{#if editing}}
+    <div class='submission-text-field'>
+        <label>{{widget.description}}</label>
+        {{bs-datetimepicker date=parameters.date.value}}
+    </div>
+{{/if}}
+{{yield}}

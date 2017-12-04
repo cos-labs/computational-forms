@@ -1,0 +1,25 @@
+<style>
+
+    .submission-text-area {
+        margin-top: 10px;
+    }
+    .submission-text-area > textarea {
+        resize: vertical;
+    }
+
+
+</style>
+
+{{#if (not editing)}}
+
+    {{valueName}}: {{parameters.value.value}}
+
+{{/if}}
+
+{{#if editing}}
+    <div class='submission-text-area'>
+        <label>{{widget.description}}</label>
+        {{textarea value=parameters.value.value class='form-control'}}
+    </div>
+{{/if}}
+{{yield}}
