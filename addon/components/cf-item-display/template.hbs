@@ -1,0 +1,17 @@
+<div class="property">
+    <div class="name">Title</div>
+    <div class="value">{{item.title}}</div>
+</div>
+
+<div class="property">
+    <div class="name">Kind</div>
+    <div class="value">{{item.kind}}</div>
+</div>
+
+<div class="property">
+    <div class="name">Description</div>
+    <div class="value">{{item.description}}</div>
+</div>
+<h3>Materials</h3>
+{{file-renderer download=item.fileLink width="100%" allowfullscreen=true}}
+{{yield}}
